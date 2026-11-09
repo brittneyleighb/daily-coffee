@@ -214,7 +214,10 @@ export const coffeeRecipes: CoffeeRecipe[] = [
 
 // === Utility Functions ===
 
-export function getTodaysRecipe(category?: 'brewing' | 'espresso'): CoffeeRecipe {
+export function getTodaysRecipe(
+  category?: 'brewing' | 'espresso',
+  date: Date = new Date()
+): CoffeeRecipe {
   const filteredRecipes = category
     ? coffeeRecipes.filter(recipe => recipe.category === category)
     : coffeeRecipes;
@@ -223,8 +226,13 @@ export function getTodaysRecipe(category?: 'brewing' | 'espresso'): CoffeeRecipe
     throw new Error(`No recipes found for category: ${category}`);
   }
 
-  const randomIndex = Math.floor(Math.random() * filteredRecipes.length);
-  return filteredRecipes[randomIndex];
+  // Use the user's calendar date, not a random value, so every visit on the
+  // same day shows the same recipe. Date.UTC avoids daylight-saving offsets
+  // changing the recipe index around local midnight.
+  const dayIndex = Math.floor(
+    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86_400_000
+  );
+  return filteredRecipes[dayIndex % filteredRecipes.length];
 }
 
 export function getRecipesByCategory(category: 'brewing' | 'espresso'): CoffeeRecipe[] {
