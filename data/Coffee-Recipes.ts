@@ -101,6 +101,75 @@ export const coffeeRecipes: CoffeeRecipe[] = [
     tags: ["cold", "smooth", "low-acid"]
   },
 
+  {
+    id: "10",
+    name: "Moka Pot",
+    description: "A concentrated stovetop coffee with a rich body and espresso-like intensity.",
+    ingredients: [
+      "18g finely ground coffee",
+      "180ml hot water",
+      "Moka pot"
+    ],
+    instructions: [
+      "Fill the lower chamber with hot water to just below the safety valve",
+      "Add coffee to the basket without tamping",
+      "Assemble the pot and heat over medium-low heat",
+      "Remove from heat when the stream turns pale and sputters",
+      "Serve immediately"
+    ],
+    brewTime: "6 minutes",
+    difficulty: "Medium",
+    icon: "moka",
+    category: "brewing",
+    tags: ["stovetop", "rich", "concentrated"]
+  },
+  {
+    id: "11",
+    name: "Iced Japanese Pour Over",
+    description: "A bright flash-chilled pour over that keeps delicate fruit notes crisp.",
+    ingredients: [
+      "20g medium-fine coffee",
+      "250ml hot water (200°F/93°C)",
+      "150g ice",
+      "Pour-over dripper and paper filter"
+    ],
+    instructions: [
+      "Place ice in the server and rinse the filter",
+      "Add coffee and bloom with 45ml water for 30 seconds",
+      "Pour the remaining water in slow circles",
+      "Swirl the server until the ice has mostly melted",
+      "Serve over fresh ice if desired"
+    ],
+    brewTime: "4 minutes",
+    difficulty: "Medium",
+    icon: "iced-pourover",
+    category: "brewing",
+    tags: ["iced", "bright", "filter"]
+  },
+  {
+    id: "12",
+    name: "Vietnamese Phin Coffee",
+    description: "A slow, bold drip balanced with sweetened condensed milk.",
+    ingredients: [
+      "20g medium-coarse coffee",
+      "120ml hot water (200°F/93°C)",
+      "2 tbsp sweetened condensed milk",
+      "Vietnamese phin filter"
+    ],
+    instructions: [
+      "Add condensed milk to the serving glass",
+      "Place coffee in the phin and rest the press gently on top",
+      "Bloom with a small splash of water for 20 seconds",
+      "Fill the phin and let it drip completely",
+      "Stir and serve hot or over ice"
+    ],
+    brewTime: "6 minutes",
+    difficulty: "Easy",
+    icon: "phin",
+    category: "brewing",
+    tags: ["slow-drip", "sweet", "iced"]
+  },
+
   // Espresso Recipes
   {
     id: "5",
@@ -208,7 +277,73 @@ export const coffeeRecipes: CoffeeRecipe[] = [
     icon: "cappuccino",
     category: "espresso",
     tags: ["classic", "frothy", "creamy"]
-  }
+  },
+  {
+    id: "13",
+    name: "Flat White",
+    description: "Velvety microfoam and espresso in a small, balanced milk drink.",
+    ingredients: [
+      "2 ristretto shots (40ml total)",
+      "150ml cold milk"
+    ],
+    instructions: [
+      "Pull two short ristretto shots into a small cup",
+      "Steam milk to a glossy microfoam with minimal visible bubbles",
+      "Swirl the milk to keep the texture even",
+      "Pour steadily into the espresso",
+      "Serve immediately"
+    ],
+    brewTime: "5 minutes",
+    difficulty: "Medium",
+    icon: "flatwhite",
+    category: "espresso",
+    tags: ["velvety", "balanced", "milk"]
+  },
+  {
+    id: "14",
+    name: "Caffè Mocha",
+    description: "A chocolate-forward espresso drink softened with steamed milk.",
+    ingredients: [
+      "1 double espresso (60ml)",
+      "180ml steamed milk",
+      "1 tbsp chocolate sauce or cocoa syrup"
+    ],
+    instructions: [
+      "Add chocolate sauce to the cup",
+      "Pull espresso over the chocolate and stir until smooth",
+      "Steam milk until silky",
+      "Pour milk into the espresso mixture",
+      "Finish with cocoa powder if desired"
+    ],
+    brewTime: "6 minutes",
+    difficulty: "Easy",
+    icon: "mocha",
+    category: "espresso",
+    tags: ["chocolate", "sweet", "milk"]
+  },
+  {
+    id: "15",
+    name: "Espresso Tonic",
+    description: "A sparkling, bitter-sweet iced espresso drink with citrus lift.",
+    ingredients: [
+      "1 double espresso (60ml)",
+      "180ml chilled tonic water",
+      "Ice",
+      "Orange peel (optional)"
+    ],
+    instructions: [
+      "Fill a tall glass with ice",
+      "Pour tonic water over the ice",
+      "Slowly pour espresso over the back of a spoon",
+      "Add an orange peel if using",
+      "Serve without stirring until the first sip"
+    ],
+    brewTime: "4 minutes",
+    difficulty: "Easy",
+    icon: "tonic",
+    category: "espresso",
+    tags: ["iced", "sparkling", "citrus"]
+  },
 ];
 
 
